@@ -1,0 +1,85 @@
+{
+  "routes": [
+    {
+      "route_id": "RT01",
+      "name": "Home to Campus Main Gate",
+      "distance_m": 850,
+      "waypoints": [
+        {
+          "step": 1,
+          "landmark": "Front Door",
+          "direction": "North",
+          "distance_m": 50
+        },
+        {
+          "step": 2,
+          "landmark": "Street Corner",
+          "direction": "East",
+          "distance_m": 200
+        },
+        {
+          "step": 3,
+          "landmark": "Crosswalk",
+          "direction": "North",
+          "distance_m": 300
+        },
+        {
+          "step": 4,
+          "landmark": "Campus Gate",
+          "direction": "East",
+          "distance_m": 300
+        }
+      ]
+    },
+    {
+      "route_id": "RT02",
+      "name": "Campus Gate to Library",
+      "distance_m": 420,
+      "waypoints": [
+        {
+          "step": 1,
+          "landmark": "Main Gate",
+          "direction": "East",
+          "distance_m": 100
+        },
+        {
+          "step": 2,
+          "landmark": "Fountain",
+          "direction": "North",
+          "distance_m": 150
+        },
+        {
+          "step": 3,
+          "landmark": "Library Steps",
+          "direction": "East",
+          "distance_m": 170
+        }
+      ]
+    },
+    {
+      "route_id": "RT03",
+      "name": "Dorm to Cafeteria",
+      "distance_m": 310,
+      "waypoints": [
+        {
+          "step": 1,
+          "landmark": "Dorm Exit",
+          "direction": "South",
+          "distance_m": 80
+        },
+        {
+          "step": 2,
+          "landmark": "Garden Path",
+          "direction": "West",
+          "distance_m": 130
+        },
+        {
+          "step": 3,
+          "landmark": "Cafeteria Door",
+          "direction": "South",
+          "distance_m": 100
+        }
+      ]
+    }
+  ]
+}
