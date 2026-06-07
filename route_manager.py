@@ -25,3 +25,13 @@ class RouteManager:
                 return route
 
         return None
+    
+    def get_waypoints(self,routes: list,route_id: str) -> list:
+
+        route = self.get_route(routes, route_id)
+
+        if route is None:
+
+            raise ValueError("Route not found")
+
+        return route["waypoints"]
