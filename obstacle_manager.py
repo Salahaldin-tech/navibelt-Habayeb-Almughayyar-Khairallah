@@ -68,6 +68,13 @@ class ObstacleManager:
 
         return log   
     
+    def get_by_route(self, log, route_id):
+        return [e for e in log if e["route_id"] == route_id]
 
-
+    def analyze_directions(self, log):
+        counts = {}
+        for e in log:
+            direction = e["direction"]
+            counts[direction] = counts.get(direction, 0) + 1
+        return counts
 
