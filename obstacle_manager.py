@@ -1,5 +1,5 @@
 import csv
-
+from datetime import datetime 
 
 class ObstacleManager:
 
@@ -36,7 +36,37 @@ class ObstacleManager:
 
         print("Log saved")
     
-    
+    def add_event(self,log,route_id,direction, distance_cm):
+
+        valid = ["Front", "Left", "Right", "Rear" ]
+
+        if direction not in valid:
+            raise ValueError(f"Invalid direction: {direction}")
+
+        if distance_cm < 50:
+            severity = "High"
+
+        elif distance_cm <= 100:
+            severity = "Medium"
+
+        else:
+            severity = "Low"
+
+        new_id = f"EVT{len(log)+1:03d}"
+
+        event = { "event_id": new_id,
+                  "route_id": route_id,
+                  "timestamp":datetime.now().strftime( "%Y-%m-%d %H:%M:%S"),
+                  "direction": direction,
+                  "distance_cm": distance_cm,
+                  "severity": severity
+        }
+
+        log.append(event)
+
+        print(f"Event logged: {new_id} — {direction} obstacle at {distance_cm} cm ({severity}) on {route_id}")
+
+        return log   
     
 
 
